@@ -1,0 +1,95 @@
+<html>
+	<head>
+		<title>MwSt - Rechner</title>
+		
+		<style type="text/css" media="screen">
+			html {
+				font-family: Arial, 'Trebuchet MS', Verdana, Helvetica, sans-serif;
+			}
+			
+			strong {
+				font-size: 1.5em;
+			}
+			
+			.float_right {
+				float: right;
+			}
+			
+			#mwst_calc {
+				background-color: #EEE;
+				border: 1px solid;
+				padding-top: 15px;
+				padding-left: 15px;
+				width: 400px;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div id="mwst_calc">
+			<form oninput="document.getElementById('netto').innerHTML = (parseFloat(amount.value) * parseFloat(price.value)).toFixed(2);
+							document.getElementById('tax').innerHTML = (parseFloat(netto.value) * 0.19).toFixed(2);
+							document.getElementById('total').innerHTML = (parseFloat(netto.value) + parseFloat(tax.value)).toFixed(2)">
+							
+				<table>
+					<caption>
+						<strong>MwSt - Rechner</strong>
+						<hr>
+					</caption>
+					<tbody>
+						<tr>
+							<th class="float_right">
+								Artikel Anzahl:
+							</th>
+							<td>
+								<input type="number" name="amount" value="0" min="0" style="width: 50%;">
+							</td>
+						</tr>
+						<tr>
+							<th class="float_right">
+								Artikel Netto-Preis:
+							</th>
+							<td>
+								<input type="number" name="price" value="0.00" min="0" step="0.01">
+							</td>
+						</tr>
+						<tr>
+							<th class="float_right">
+								Nettobetrag:
+							</th>
+							<td>
+								<div class="float_right">
+									<output id="netto">0.00</output> Euro
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th class="float_right">
+								19% MwSt:
+							</th>
+							<td>
+								<div class="float_right">
+									<output id="tax">0.00</output> Euro
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th class="float_right">
+								Gesamtbetrag inkl. MwSt:
+							</th>
+							<td>
+								<div class="float_right">
+									<output id="total">0.00</output> Euro
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				
+				<input type="reset" value=" Reset " style="margin-top: 10px; margin-left: 42%" onclick="document.getElementById('netto').innerHTML = parseFloat('0').toFixed(2);
+																										document.getElementById('tax').innerHTML = parseFloat('0').toFixed(2);
+																										document.getElementById('total').innerHTML = parseFloat('0').toFixed(2)">
+			</form>
+		</div>
+	</body>
+</html>
