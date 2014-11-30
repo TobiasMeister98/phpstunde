@@ -1,0 +1,10 @@
+Man gibt Kommentare an um daraufhinzuweisen, was ein bestimmter Code-Abschnitt tut,
+sodass man an einem späteren Punkt in der Entwicklung ganz einfach wieder verstehen kann was,
+und warum man etwas getan hat.
+
+// Einzeiliger Kommentar
+
+/*
+	Mehrzeiliger
+	Kommentar
+*/

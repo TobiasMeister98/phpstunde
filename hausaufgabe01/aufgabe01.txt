@@ -1,0 +1,17 @@
+Möglichkeiten PHP-Skripte einzubinden:
+
+<?php
+	hier steht ein (oder mehrere) PHP-Befehl(e)
+?>
+
+<script language="php">
+	hier steht ein (oder mehrere) PHP-Befehl(e)
+</script>
+
+<?
+	hier steht ein (oder mehrere) PHP-Befehl(e)
+?>
+
+<%
+	hier steht ein (oder mehrere) PHP-Befehl(e)
+%>
