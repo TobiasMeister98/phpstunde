@@ -1,0 +1,291 @@
+<!DOCTYPE>
+
+<html>
+    <head>
+        <title>Kurs-Buchung</title>
+        
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    
+    <body>
+        <div id="wrapper">
+            <form name="booking" method="post" action="booking.php">
+                <div id="kunde">
+                    <table>
+                        <caption>
+                            <strong>Kunden-Daten</strong>
+                            <hr>
+                        </caption>
+                        
+                        <tbody>
+                            <tr>
+                                <th class="float_right">
+                                    Name:
+                                </th>
+
+                                <td>
+                                    <input name="name" maxlength="50">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th class="float_right">
+                                    Vorname:
+                                </th>
+
+                                <td>
+                                    <input name="vorname" maxlength="30">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th class="float_right">
+                                    Geburtstag:
+                                </th>
+
+                                <td>
+                                    <input name="geburtsdatum" maxlength="10">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th class="float_right">
+                                    E-Mail:
+                                </th>
+
+                                <td>
+                                    <input name="email" type="email" maxlength="50">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="kurs1">
+                    <table>
+                        <caption>
+                            <strong>1. Kurs</strong>
+                            <hr>
+                        </caption>
+
+                        <tbody>
+                            <tr>
+                                <th class="float_right">
+                                    Kursart:
+                                </th>
+
+                                <td>
+                                    <select name="kursart1" class="select_kurs">
+                                        <option value="0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--- Kein ---</option>
+                                        <option value="os">Betriebssysteme</option>
+                                        <option value="hardware">Hardware</option>
+                                        <option value="networking">Netzwerke</option>
+                                        <option value="programming">Programmieren</option>
+                                    </select>
+                                </td>
+
+                                <td>
+                                    Kursschwerpunkte
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th class="float_right">
+                                    Kursbezeichnung:
+                                </th>
+
+                                <td>
+                                    <select name="kursbezeichnung1" class="select_kurs">
+                                        <option value="0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--- Kein ---</option>
+                                        <option value="windows">Windows</option>
+                                        <option value="linux">Linux</option>
+                                        <option value="pc_work">PC schrauben</option>
+                                        <option value="cisco">Cisco</option>
+                                        <option value="segmentieren">Segmentieren</option>
+                                        <option value="permissions">Benutzerrechte</option>
+                                        <option value="java">Java</option>
+                                        <option value="html">HTML</option>
+                                        <option value="php">PHP</option>
+                                        <option value="sql">SQL</option>
+                                    </select>
+                                </td>
+
+                                <td>
+                                    Einzelne Kurse
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th class="float_right">
+                                    Kurspreis:
+                                </th>
+
+                                <td>
+                                    16 Stunden
+                                </td>
+
+                                <td>
+                                    Netto: 90&euro;
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="kurs2">
+                    <table>
+                        <caption>
+                            <strong>2. Kurs</strong>
+                            <hr>
+                        </caption>
+
+                        <tbody>
+                            <tr>
+                                <th class="float_right">
+                                    Kursart:
+                                </th>
+
+                                <td>
+                                    <select name="kursart2" class="select_kurs">
+                                        <option value="0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--- Kein ---</option>
+                                        <option value="os">Betriebssysteme</option>
+                                        <option value="hardware">Hardware</option>
+                                        <option value="networking">Netzwerke</option>
+                                        <option value="programming">Programmieren</option>
+                                    </select>
+                                </td>
+
+                                <td>
+                                    Kursschwerpunkte
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th class="float_right">
+                                    Kursbezeichnung:
+                                </th>
+
+                                <td>
+                                    <select name="kursbezeichnung2" class="select_kurs">
+                                        <option value="0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--- Kein ---</option>
+                                        <option value="windows">Windows</option>
+                                        <option value="linux">Linux</option>
+                                        <option value="pc_work">PC schrauben</option>
+                                        <option value="cisco">Cisco</option>
+                                        <option value="segmentieren">Segmentieren</option>
+                                        <option value="permissions">Benutzerrechte</option>
+                                        <option value="java">Java</option>
+                                        <option value="html">HTML</option>
+                                        <option value="php">PHP</option>
+                                        <option value="sql">SQL</option>
+                                    </select>
+                                </td>
+
+                                <td>
+                                    Einzelne Kurse
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th class="float_right">
+                                    Kurspreis:
+                                </th>
+
+                                <td>
+                                    16 Stunden
+                                </td>
+
+                                <td>
+                                    Netto: 90&euro;
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="kurs3">
+                    <table>
+                        <caption>
+                            <strong>3. Kurs</strong>
+                            <hr>
+                        </caption>
+
+                        <tbody>
+                            <tr>
+                                <th class="float_right">
+                                    Kursart:
+                                </th>
+
+                                <td>
+                                    <select name="kursart3" class="select_kurs">
+                                        <option value="0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--- Kein ---</option>
+                                        <option value="os">Betriebssysteme</option>
+                                        <option value="hardware">Hardware</option>
+                                        <option value="networking">Netzwerke</option>
+                                        <option value="programming">Programmieren</option>
+                                    </select>
+                                </td>
+
+                                <td>
+                                    Kursschwerpunkte
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th class="float_right">
+                                    Kursbezeichnung:
+                                </th>
+
+                                <td>
+                                    <select name="kursbezeichnung3" class="select_kurs">
+                                        <option value="0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--- Kein ---</option>
+                                        <option value="windows">Windows</option>
+                                        <option value="linux">Linux</option>
+                                        <option value="pc_work">PC schrauben</option>
+                                        <option value="cisco">Cisco</option>
+                                        <option value="segmentieren">Segmentieren</option>
+                                        <option value="permissions">Benutzerrechte</option>
+                                        <option value="java">Java</option>
+                                        <option value="html">HTML</option>
+                                        <option value="php">PHP</option>
+                                        <option value="sql">SQL</option>
+                                    </select>
+                                </td>
+
+                                <td>
+                                    Einzelne Kurse
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th class="float_right">
+                                    Kurspreis:
+                                </th>
+
+                                <td>
+                                    16 Stunden
+                                </td>
+
+                                <td>
+                                    Netto: 90&euro;
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <table id="form_buttons">
+                    <tr>
+                        <td>
+                            <input type="reset">
+                        </td>
+
+                        <td>
+                            <input type="submit" value="Kostenpflichtig buchen">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>

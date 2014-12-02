@@ -1,0 +1,49 @@
+html {
+    font-family: Arial, 'Trebuchet MS', Verdana, Helvetica, sans-serif;
+}
+
+strong {
+    font-size: 1.5em;
+}
+
+.float_right {
+    float: right;
+}
+
+.select_kurs {
+    width: 125px
+}
+
+#wrapper {
+    background-color: #FFF9CC;
+    border: 2px solid;
+    padding-left: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+#kunde, #kurs1, #kurs2, #kurs3, #successful, #unsuccessful {
+    background-color: #EEE;
+    border: 1px solid;
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-bottom: 1em;
+}
+
+#kunde {
+    width: 300px;
+}
+
+#kurs1, #kurs2, #kurs3 {
+    margin-top: 1em;
+    width: 440px;
+}
+
+#successful, #unsuccessful {
+    width: 165px;
+}
+
+#form_buttons {
+    margin-top: 1em;
+    margin-bottom: -1em;
+}
