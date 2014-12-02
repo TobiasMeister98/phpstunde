@@ -22,7 +22,7 @@ strong {
     padding-bottom: 1em;
 }
 
-#kunde, #kurs1, #kurs2, #kurs3, #successful, #unsuccessful {
+#kunde, #kurs1, #kurs2, #kurs3, #successful_discount, #successful_nodiscount, #unsuccessful {
     background-color: #EEE;
     border: 1px solid;
     padding-top: 1em;
@@ -39,8 +39,16 @@ strong {
     width: 440px;
 }
 
-#successful, #unsuccessful {
-    width: 165px;
+#successful_discount {
+    width: 210px;
+}
+
+#successful_nodiscount {
+    width: 175px;
+}
+
+#unsuccessful {
+    width: 153px;
 }
 
 #form_buttons {

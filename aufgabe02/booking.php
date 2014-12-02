@@ -63,10 +63,14 @@
             $summenetto = $kurspreis * $anzahlKurse;
             $mwstbetrag = $summenetto * $mwstsatz;
             $brutto = $summenetto + $mwstbetrag;
+			
+            if($brutto > 200) {
+            $rabatt = $brutto * 0.15;
+            $gesamtbetrag = $brutto - $rabatt;
             ?>
                 
                 <div id="wrapper">
-                    <div id="successful">
+                    <div id="successful_discount">
                         <table>
                             <caption>
                                 <strong>Erfolgreiche Buchung</strong>
@@ -80,7 +84,7 @@
                                     </th>
                                     
                                     <td>
-                                        <?=$anzahlKurse?>
+                                        <output class="float_right"><?=$anzahlKurse?> Kurs<?php if($anzahlKurse > 1) echo 'e';?></output>
                                     </td>
                                 </tr>
                                 
@@ -90,7 +94,64 @@
                                     </th>
                                     
                                     <td>
-                                        <?=$brutto;?>
+                                        <output class="float_right"><?=$brutto;?> &euro;</output>
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <th class="float_right">
+                                        15% Rabatt:
+                                    </th>
+                                    
+                                    <td>
+                                         <output class="float_right"><?=$rabatt?> &euro;</output>
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <th class="float_right">
+                                        Gesamtbetrag:
+                                    </th>
+                                    
+                                    <td>
+                                        <output class="float_right"><?=$gesamtbetrag?> &euro;</output>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+            <?php
+            } else {
+            ?>
+                
+                <div id="wrapper">
+                    <div id="successful_nodiscount">
+                        <table>
+                            <caption>
+                                <strong>Erfolgreiche Buchung</strong>
+                                <hr>
+                            </caption>
+
+                            <tbody>
+                                <tr>
+                                    <th class="float_right">
+                                        Buchungen:
+                                    </th>
+                                    
+                                    <td>
+                                        <output class="float_right"><?=$anzahlKurse?> Kurs<?php if($anzahlKurse > 1) echo 'e';?></output>
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <th class="float_right">
+                                        Preis:
+                                    </th>
+                                    
+                                    <td>
+                                        <output class="float_right"><?=$brutto;?> &euro;</output>
                                     </td>
                                 </tr>
                             </tbody>
@@ -100,6 +161,7 @@
                 
             <?php
             }
-            ?>
+        }
+        ?>
     </body>
 </html>
