@@ -119,10 +119,10 @@
 
                         <tr>
                             <td>
-                                <input type="checkbox" name="tv" value="Dokumentationen">Dokumentationen<br>
-                                <input type="checkbox" name="tv" value="Nachrichten">Nachrichten<br>
-                                <input type="checkbox" name="tv" value="Spielfilme">Spielfilme<br>
-                                <input type="checkbox" name="tv" value="Sport">Sport
+                                <input type="checkbox" name="tv[]" value="Dokumentationen">Dokumentationen<br>
+                                <input type="checkbox" name="tv[]" value="Nachrichten">Nachrichten<br>
+                                <input type="checkbox" name="tv[]" value="Spielfilme">Spielfilme<br>
+                                <input type="checkbox" name="tv[]" value="Sport">Sport
                             </td>
                         </tr>
 
@@ -145,44 +145,28 @@
                 <input type="submit" name="absenden" value="Abschicken">
                 <input type="reset">
             </div>
-            
-            <?php
-                if(isset($_POST["abschicken"])) {
-                    // -- !!! --  REPAIR  -- !!! -- //
-                    $vorname = "";
-                    $nachname = "";
-                    $wohnort = "";
-
-                    $wohnart = "";
-                    $sendungen = array();
-                    $message = "";
-
-                    $vorname = $_POST["vorname"];
-                    $nachname = $_POST["nachname"];
-                    $wohnort = $_POST["wohnort"];
-
-                    $wohnart = $_POST["live"];
-                    $sendungen = array($_POST["tv"]);
-                    $message = $_POST["msg"];
-                    
-                    $mail = "meister.tobias21@gmail.com";
-                    
-                    mail($mail, "Umfrage", "
-                        Vorname: $vorname
-                        Nachname: $nachname
-                        Wohnort: $wohnort
-                        
-                        Wie wohnen Sie?
-                        $wohnart
-                        
-                        Welche TV-Sendungen sehen Sie gern?
-                        $sendungen
-                        
-                        Habn Sie noch eine Nachricht an uns?
-                        $message
-                    ", "From: $mail");
-                }
-            ?>
         </form>
+
+        <?php
+            error_reporting(0);
+            
+            if(isset($_POST["absenden"])) {
+                $vorname = $_POST["vorname"];
+                $nachname = $_POST["nachname"];
+                $wohnort = $_POST["wohnort"];
+
+                $wohnart = $_POST["live"];
+                $sendungen = $_POST["tv"];
+                $message = $_POST["msg"];
+
+                $mail = "meister.tobias21@gmail.com";
+                
+                $sendungen = implode(", ", $sendungen);
+                
+                mail($mail, "Umfrage", "Vorname: $vorname\nNachname: $nachname\nWohnort: $wohnort\n\nWie wohnen Sie?\n$wohnart\n\nWelche TV-Sendungen sehen Sie gern?\n$sendungen\n\nHaben Sie noch eine Nachricht an uns?\n$message", "From: $mail");
+                
+                error_reporting(1);
+            }
+        ?>
     </body>
 </html>
