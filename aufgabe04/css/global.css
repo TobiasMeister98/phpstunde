@@ -1,0 +1,38 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em;
+    margin: 0;
+    padding: 10px;
+}
+.booking-main > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.booking-content {
+    margin: 0 0 25px;
+    border: 1px dotted #888;
+    padding: 20px;
+}
+.booking-content > form > table > caption {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: left;
+    padding-bottom: 10px;
+}
+.booking-content > form > table tr > td {
+    padding-right: 20px;
+}
+.booking-content input[type="text"],
+.booking-content input[type="email"],
+.booking-content input[type="password"] {
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #0dd;
+    padding: 5px 5px;
+    font-size: 1.4em;
+}
+.booking-submit > input {
+    padding: 15px 20px;
+    font-size: 1.1em;
+}
