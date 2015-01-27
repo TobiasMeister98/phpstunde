@@ -12,7 +12,7 @@
     
     <body>
         <form name="booking_lecture" method="post">
-            <?php include("booking_lecture/booking_lecture.php") ?>
+            <?php include("booking_lecture/booking_lecture.php"); ?>
         </form>
     </body>
 </html>

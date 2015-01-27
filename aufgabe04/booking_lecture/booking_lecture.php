@@ -1,5 +1,5 @@
 <?php
-
+/*
 $servername = "localhost";
 $username = "root";
 $password = "DvsK*12G";
@@ -24,7 +24,7 @@ if ($result->num_rows > 0) {
 */
 
 /* insert */
-
+/*
 $email = "der@sack.lol";
 $pass = "123456";
 $sha_pass = sha1($pass);
@@ -36,8 +36,8 @@ if ($conn->query($sql) === TRUE) {
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
-
-$conn->close();
+*/
+/*$conn->close();*/
 
 ?>
 
