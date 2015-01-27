@@ -14,14 +14,24 @@ body {
     border: 1px dotted #888;
     padding: 20px;
 }
-.booking-content > form > table > caption {
+.booking-content > table > caption {
     font-size: 2em;
     font-weight: bold;
     text-align: left;
     padding-bottom: 10px;
 }
-.booking-content > form > table tr > td {
+.booking-content > table tr > td {
     padding-right: 20px;
+    vertical-align: top;
+}
+.td-front {
+    vertical-align: middle!important;
+}
+.booking-content input,
+.booking-content select,
+.lecture-description {
+    padding: 5px;
+    font-size: 1.4em;
 }
 .booking-content input[type="text"],
 .booking-content input[type="email"],
@@ -29,8 +39,14 @@ body {
     border: none;
     outline: none;
     border-bottom: 2px solid #0dd;
-    padding: 5px 5px;
-    font-size: 1.4em;
+}
+.booking-content select {
+    width: 250px;
+}
+.lecture-description {
+    min-height: 1.4em;
+    max-width: 500px;
+    border: 1px solid darkgrey;
 }
 .booking-submit > input {
     padding: 15px 20px;

@@ -3,12 +3,41 @@
 $servername = "localhost";
 $username = "root";
 $password = "DvsK*12G";
+$dbname = "aufgabe04";
 
-$db = new mysqli($servername, $username, $password);
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-if ($db->connect_error) {
-    die("Connection failed: ".$db->connect_error);
+if ($conn->connect_error) die("Connection failed: ".$conn->connect_error);
+
+/* fetch */
+/*
+$sql = "SELECT * FROM `booking`";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+        
+    }
+} else {
+    echo "0 results";
 }
+*/
+
+/* insert */
+
+$email = "der@sack.lol";
+$pass = "123456";
+$sha_pass = sha1($pass);
+
+$sql = "INSERT INTO attendant (email, password) VALUES ('" . $email . "', UNHEX('" . $sha_pass . "'))";
+
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
 
 ?>
 

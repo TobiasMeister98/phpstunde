@@ -2,7 +2,7 @@
 
 <html lang="de">
     <head>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
         
         <title>Kursbuchung</title>
         
@@ -11,6 +11,8 @@
     </head>
     
     <body>
-        <?php include("booking_lecture/booking_lecture.php") ?>
+        <form name="booking_lecture" method="post">
+            <?php include("booking_lecture/booking_lecture.php") ?>
+        </form>
     </body>
 </html>
