@@ -1,5 +1,5 @@
 <?php
-/*
+
 $servername = "localhost";
 $username = "root";
 $password = "DvsK*12G";
@@ -10,18 +10,20 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) die("Connection failed: ".$conn->connect_error);
 
 /* fetch */
-/*
-$sql = "SELECT * FROM `booking`";
+
+$sql = "SELECT * FROM `attendant`";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
+    echo "<pre>";
     while($row = $result->fetch_assoc()) {
-        
+        echo var_dump($row)."<br>";
     }
+    echo "</pre>";
 } else {
     echo "0 results";
 }
-*/
+
 
 /* insert */
 /*
@@ -37,7 +39,8 @@ if ($conn->query($sql) === TRUE) {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
 */
-/*$conn->close();*/
+
+$conn->close();
 
 ?>
 
