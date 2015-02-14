@@ -10,7 +10,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) die("Connection failed: ".$conn->connect_error);
 
 /* fetch */
-
+/*
 $sql = "SELECT * FROM `attendant`";
 $result = $conn->query($sql);
 
@@ -23,11 +23,11 @@ if ($result->num_rows > 0) {
 } else {
     echo "0 results";
 }
-
+*/
 
 /* insert */
 /*
-$email = "der@sack.lol";
+$email = "test@email.com";
 $pass = "123456";
 $sha_pass = sha1($pass);
 
