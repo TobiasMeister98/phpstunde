@@ -11,7 +11,7 @@ if ($conn->connect_error) die("Connection failed: ".$conn->connect_error);
 
 /* fetch */
 /*
-$sql = "SELECT * FROM `attendant`";
+$sql = "SELECT * FROM attendant";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -31,7 +31,7 @@ $email = "test@email.com";
 $pass = "123456";
 $sha_pass = sha1($pass);
 
-$sql = "INSERT INTO attendant (email, password) VALUES ('" . $email . "', UNHEX('" . $sha_pass . "'))";
+$sql = "INSERT INTO attendant (email, password) VALUES ('$email', UNHEX('$sha_pass'))";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
